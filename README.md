@@ -72,13 +72,15 @@
 
 `@AutoCacheEvict`自动清除缓存注解，清除缓存需声明`cacheName`缓存名称
 
-```
+```java
     @AutoCacheEvict(cacheName = "teacher", key = "#teacher.id")
     public Integer update(Teacher teacher) {
         return 1;
     }
 
 ```
+
+
 更多功能，参考demo代码。
 
 #### 支持
