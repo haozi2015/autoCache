@@ -13,7 +13,7 @@
 
 1.  JDK 1.8+
 2.  Spring boot 2.0+
-3.  添加maven依赖（中央仓库拉取）
+3.  添加maven依赖（中央仓库上传中）
 ```xml
 <dependency>
     <groupId>com.haozi</groupId>
