@@ -25,7 +25,7 @@
 #### 使用说明
 `@AutoCache` 自动缓存注解，二级缓存优先级：本地缓存 > 远程缓存 > 回源
 
-```
+```java
 
     // 本地缓存，5秒过期
     @AutoCache(localTTL = 5)
@@ -47,7 +47,7 @@
 
 ```
 `@AutoCache` 自定缓存注解，自定义key，支持Spring Expression Language (SpEL)解析表达式
-```
+```java
     @AutoCache(localTTL = 5, key = "#id+'-'+#name")
     public Teacher getTeacher(Long id,String name) {
         return new Teacher();
@@ -56,7 +56,7 @@
 ```
 `@AutoCache`自动缓存注解，`elementCache`为true支持集合元素的缓存，并只回源miss部分的元素
 
-```
+```java
     // 缓存集合元素，List方式
     @AutoCache(localTTL = 5, elementCache = true)
     public List<Teacher> getTeacher(List<Long> ids) {
