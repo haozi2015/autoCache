@@ -54,7 +54,7 @@
     }
 
 ```
-`@AutoCache`自动缓存注解，`elementCache`为true支持集合元素的缓存，并只回源miss部分的元素
+`@AutoCache`自动缓存注解，`elementCache`为true时，支持集合元素的缓存，并回源miss部分的元素
 
 ```java
     // 缓存集合元素，List方式
