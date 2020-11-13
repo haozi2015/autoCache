@@ -46,7 +46,7 @@
     }
 
 ```
-`@AutoCache` 自定缓存注解，自定义key，支持Spring Expression Language (SpEL)解析表达式
+`@AutoCache` 自动缓存注解，key支持Spring Expression Language (SpEL)解析表达式
 ```java
     @AutoCache(localTTL = 5, key = "#id+'-'+#name")
     public Teacher getTeacher(Long id,String name) {
@@ -54,7 +54,7 @@
     }
 
 ```
-`@AutoCache`自动缓存注解，`elementCache`为true时，支持集合元素的缓存，并回源miss部分的元素
+`@AutoCache`注解`elementCache`为true时，支持集合元素的缓存，并回源miss部分的元素
 
 ```java
     // 缓存集合元素，List方式
