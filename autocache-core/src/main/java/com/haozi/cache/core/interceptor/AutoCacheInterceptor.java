@@ -17,7 +17,6 @@ import java.lang.reflect.Method;
  * 自动缓存拦截器
  *
  * @author haozi
- * @date 2020/10/1911:09 上午
  */
 @Slf4j
 public class AutoCacheInterceptor implements MethodInterceptor, Serializable {

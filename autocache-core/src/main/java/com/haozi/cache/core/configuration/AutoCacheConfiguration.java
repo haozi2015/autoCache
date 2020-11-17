@@ -13,7 +13,6 @@ import org.springframework.data.redis.connection.RedisConnectionFactory;
  * 自动缓存bean配置
  *
  * @author haozi
- * @date 2020/10/1911:06 上午
  */
 @Configuration
 public class AutoCacheConfiguration {

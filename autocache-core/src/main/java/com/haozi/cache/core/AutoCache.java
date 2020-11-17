@@ -16,7 +16,6 @@ import java.lang.annotation.Target;
  * 返回集合，若元素是对象且对象中属性声明了AutoCacheField注解，key为此参数值
  *
  * @author haozi
- * @date 2020/6/410:28 下午
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.METHOD})
@@ -28,7 +27,7 @@ public @interface AutoCache {
      * <p>
      * 不缓存null结果
      *
-     * @return
+     * @return localTTL
      */
     long localTTL() default 0;
 
@@ -39,7 +38,7 @@ public @interface AutoCache {
      * <p>
      * 缓存null结果
      *
-     * @return
+     * @return remoteTTL
      */
     long remoteTTL() default 0;
 
@@ -52,7 +51,7 @@ public @interface AutoCache {
      * <p>
      * 特殊场景：如果返回对象class中的属性声明{@link AutoCacheField},则使用声明字段值为key；
      *
-     * @return
+     * @return key
      */
     String key() default "";
 
@@ -62,7 +61,7 @@ public @interface AutoCache {
      * 元素要求：
      * 必须为对象，且实现{@link java.io.Serializable}接口，属性声明{@link AutoCacheField}注解
      *
-     * @return
+     * @return elementCache
      */
     boolean elementCache() default false;
 
@@ -73,7 +72,7 @@ public @interface AutoCache {
      * <p>
      * 默认值：声明{@link AutoCache}注解的方法类名+方法名
      *
-     * @return
+     * @return cacheName
      */
     String cacheName() default "";
 

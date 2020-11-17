@@ -12,7 +12,6 @@ import java.util.Map;
  * 缓存自定义共用约束
  *
  * @author haozi
- * @date 2020/10/228:05 下午
  */
 @Slf4j
 public abstract class AbstractCache<K, V> implements Cache<K, V> {

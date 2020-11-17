@@ -15,7 +15,6 @@ import java.util.concurrent.TimeUnit;
  * 本地缓存
  *
  * @author haozi
- * @date 2020/10/2210:51 上午
  */
 @Slf4j
 public class LocalCache extends AbstractCache {

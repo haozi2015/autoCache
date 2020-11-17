@@ -19,7 +19,6 @@ import java.util.concurrent.ConcurrentHashMap;
  * 匹配自定义注解
  *
  * @author haozi
- * @date 2020/10/225:11 下午
  */
 public class CacheOperationSourcePointcut extends StaticMethodMatcherPointcut {
     private final Map<Object, Boolean> attributeCache = new ConcurrentHashMap<>(1024);

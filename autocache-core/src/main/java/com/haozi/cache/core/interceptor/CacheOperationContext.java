@@ -12,7 +12,6 @@ import java.util.Map;
  * 缓存上下文
  *
  * @author haozi
- * @date 2020/10/2311:00 上午
  */
 @Data
 @AllArgsConstructor
@@ -27,7 +26,7 @@ public class CacheOperationContext {
     /**
      * 返回MAP形式集合
      *
-     * @return
+     * @return true：是；false；否
      */
     public boolean isCacheFieldMap() {
         return operation.isElementCache() && method.getReturnType().isAssignableFrom(Map.class);
@@ -36,7 +35,7 @@ public class CacheOperationContext {
     /**
      * 返回List集合形式
      *
-     * @return
+     * @return true：是；false；否
      */
     public boolean isCacheFieldList() {
         return operation.isElementCache() && method.getReturnType().isAssignableFrom(List.class);
@@ -47,7 +46,7 @@ public class CacheOperationContext {
      * <p>
      * 影响是否可以单个元素缓存
      *
-     * @return
+     * @return true：是；false；否
      */
     public boolean isArgsList() {
         return args != null && args.length >= 1 && args[0] instanceof List;

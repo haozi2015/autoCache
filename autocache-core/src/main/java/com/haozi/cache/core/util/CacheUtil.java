@@ -19,7 +19,6 @@ import java.util.stream.Stream;
  * 缓存工具类
  *
  * @author haozi
- * @date 2020/10/206:29 下午
  */
 public class CacheUtil {
     private final static ExpressionParser parser = new SpelExpressionParser();
@@ -33,7 +32,7 @@ public class CacheUtil {
      * @param keySEL key表达式，详见Spring Expression Language (SpEL)语法
      * @param method 方法
      * @param args   参数
-     * @return
+     * @return key
      */
     public static Object generateKey(String keySEL, Method method, Object[] args) {
         if (StringUtils.isEmpty(keySEL)) {
@@ -56,8 +55,8 @@ public class CacheUtil {
      * <p>
      * 注解未定义{@link AutoCache#key()}使用
      *
-     * @param args
-     * @return
+     * @param args 参数
+     * @return default key
      */
     public static Object generateDefaultKey(Object[] args) {
         if (args != null && args.length == 1) {
@@ -69,10 +68,10 @@ public class CacheUtil {
     }
 
     /**
-     * 获取对象属性声明{@AutoCacheField}注解的值
+     * 获取对象属性声明{@link AutoCacheField}注解的值
      *
-     * @param obj
-     * @return
+     * @param obj 声明注解对象的实力
+     * @return field value
      */
     public static Object getCacheFieldValue(Object obj) {
         Field[] fields = obj.getClass().getDeclaredFields();
@@ -94,8 +93,8 @@ public class CacheUtil {
     /**
      * 获取默认缓存名称
      *
-     * @param method
-     * @return
+     * @param method 方法
+     * @return cache name
      */
     public static String getDefaultCacheName(Method method) {
         StringBuilder nameBuilder = new StringBuilder(method.getClass().getCanonicalName());

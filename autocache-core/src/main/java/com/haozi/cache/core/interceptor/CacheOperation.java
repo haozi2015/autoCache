@@ -13,7 +13,6 @@ import java.lang.reflect.Method;
  * 缓存定义
  *
  * @author haozi
- * @date 2020/10/195:50 下午
  */
 @Data
 @Builder
@@ -29,7 +28,7 @@ public class CacheOperation {
     /**
      * 是否定义key
      *
-     * @return
+     * @return true：是；false；否
      */
     public boolean isDefinitionKey() {
         return keySEL != null && !"".equals(keySEL);

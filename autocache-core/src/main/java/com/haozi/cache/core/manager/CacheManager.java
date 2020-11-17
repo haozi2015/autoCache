@@ -8,7 +8,6 @@ import com.haozi.cache.core.util.CacheUtil;
  * 缓存管理中心
  *
  * @author haozi
- * @date 2020/10/2211:13 上午
  */
 public class CacheManager {
     private CacheFactory cacheFactory;

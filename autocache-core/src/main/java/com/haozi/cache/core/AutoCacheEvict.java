@@ -8,7 +8,6 @@ import java.lang.annotation.*;
  * 不建议在本地缓存，使用缓存删除；应用多节点，无用！
  *
  * @author haozi
- * @date 2020/6/410:28 下午
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.METHOD})
@@ -17,7 +16,7 @@ public @interface AutoCacheEvict {
     /**
      * 删除缓存名
      *
-     * @return
+     * @return cacheName
      */
     String cacheName();
 
@@ -26,7 +25,7 @@ public @interface AutoCacheEvict {
      * <p>
      * 支持Spring Expression Language (SpEL)解析表达式
      *
-     * @return
+     * @return key
      */
     String key() default "";
 }

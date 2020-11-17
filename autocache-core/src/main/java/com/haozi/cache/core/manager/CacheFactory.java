@@ -24,7 +24,6 @@ import java.util.concurrent.ConcurrentMap;
  * 实现所有缓存策略
  *
  * @author haozi
- * @date 2020-02-1910:33
  */
 public class CacheFactory {
 

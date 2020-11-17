@@ -4,7 +4,6 @@ package com.haozi.cache.core.interceptor;
  * 执行获得数据程序接口
  *
  * @author haozi
- * @date 2020/10/2210:43 上午
  */
 @FunctionalInterface
 public interface CacheInvoker {

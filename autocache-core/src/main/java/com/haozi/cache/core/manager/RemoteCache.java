@@ -12,7 +12,6 @@ import java.util.*;
  * 远端缓存
  *
  * @author haozi
- * @date 2020/10/2210:51 上午
  */
 public class RemoteCache extends RedisCache implements Cache {
 
