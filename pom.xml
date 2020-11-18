@@ -8,6 +8,15 @@
     <artifactId>autoCache</artifactId>
     <packaging>pom</packaging>
     <name>autoCache</name>
+
+    <version>1.0.1</version>
+    <modules>
+        <module>autocache-core</module>
+        <module>autocache-spring-boot-starter</module>
+        <module>autocache-spring-boot-starter-demo</module>
+    </modules>
+
+
     <url>https://github.com/haozi2015/autoCache</url>
     <description>Auto cache data component</description>
     <licenses>
@@ -24,7 +33,7 @@
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-<!--        <maven.deploy.skip>true</maven.deploy.skip>-->
+        <!--        <maven.deploy.skip>true</maven.deploy.skip>-->
     </properties>
     <developers>
         <developer>
@@ -32,7 +41,7 @@
             <id>haozi2015</id>
             <email>haozi2015@aliyun.com</email>
             <roles>
-                <role>Developer</role>
+                <role>Project lead</role>
             </roles>
             <timezone>+8</timezone>
         </developer>
@@ -103,14 +112,5 @@
             </distributionManagement>
         </profile>
     </profiles>
-
-
-    <version>1.0.0</version>
-    <modules>
-        <module>autocache-core</module>
-        <module>spring-boot-starter-autocache</module>
-        <module>spring-boot-starter-autocache-demo</module>
-    </modules>
-
 
 </project>

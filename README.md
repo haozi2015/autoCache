@@ -17,12 +17,12 @@
 1.  JDK 1.8+
 2.  Spring boot 2.0+
 3.  Redis
-4.  添加maven依赖，已上传中央仓库，可直接使用
+4.  添加maven依赖，直接从中央仓库拉取
 ```xml
 <dependency>
   <groupId>io.github.haozi2015</groupId>
-  <artifactId>spring-boot-starter-autocache</artifactId>
-  <version>1.0.0</version>
+  <artifactId>autocache-spring-boot-starter</artifactId>
+  <version>1.0.1</version>
 </dependency>
 ```
 
