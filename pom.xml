@@ -9,7 +9,7 @@
     <packaging>pom</packaging>
     <name>autoCache</name>
 
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <modules>
         <module>autocache-core</module>
         <module>autocache-spring-boot-starter</module>
