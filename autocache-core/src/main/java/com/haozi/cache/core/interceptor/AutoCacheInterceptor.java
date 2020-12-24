@@ -3,7 +3,7 @@ package com.haozi.cache.core.interceptor;
 import com.haozi.cache.core.AutoCache;
 import com.haozi.cache.core.AutoCacheEvict;
 import com.haozi.cache.core.AutoCacheEvicts;
-import com.haozi.cache.core.manager.CacheManager;
+import com.haozi.cache.core.manager.AutoCacheManager;
 import lombok.extern.slf4j.Slf4j;
 import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
@@ -21,9 +21,9 @@ import java.lang.reflect.Method;
 @Slf4j
 public class AutoCacheInterceptor implements MethodInterceptor, Serializable {
 
-    private CacheManager cacheManager;
+    private AutoCacheManager cacheManager;
 
-    public AutoCacheInterceptor(CacheManager cacheManager) {
+    public AutoCacheInterceptor(AutoCacheManager cacheManager) {
         this.cacheManager = cacheManager;
     }
 

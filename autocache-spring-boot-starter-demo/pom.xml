@@ -5,7 +5,7 @@
     <parent>
         <artifactId>autoCache</artifactId>
         <groupId>io.github.haozi2015</groupId>
-        <version>1.0.2</version>
+        <version>1.0.3</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -21,7 +21,7 @@
         <dependency>
             <groupId>io.github.haozi2015</groupId>
             <artifactId>autocache-spring-boot-starter</artifactId>
-            <version>1.0.2</version>
+            <version>1.0.3</version>
         </dependency>
     </dependencies>
     <build>

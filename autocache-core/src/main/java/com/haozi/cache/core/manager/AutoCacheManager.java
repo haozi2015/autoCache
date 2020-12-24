@@ -9,10 +9,10 @@ import com.haozi.cache.core.util.CacheUtil;
  *
  * @author haozi
  */
-public class CacheManager {
+public class AutoCacheManager {
     private CacheFactory cacheFactory;
 
-    public CacheManager(CacheFactory cacheFactory) {
+    public AutoCacheManager(CacheFactory cacheFactory) {
         this.cacheFactory = cacheFactory;
     }
 

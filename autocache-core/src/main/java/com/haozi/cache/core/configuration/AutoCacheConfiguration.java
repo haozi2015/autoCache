@@ -3,7 +3,7 @@ package com.haozi.cache.core.configuration;
 import com.haozi.cache.core.interceptor.AutoCacheInterceptor;
 import com.haozi.cache.core.interceptor.CacheOperationSourceAdvisor;
 import com.haozi.cache.core.manager.CacheFactory;
-import com.haozi.cache.core.manager.CacheManager;
+import com.haozi.cache.core.manager.AutoCacheManager;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.cache.RedisCacheWriter;
@@ -28,13 +28,13 @@ public class AutoCacheConfiguration {
     }
 
     @Bean
-    public CacheManager cacheManager(CacheFactory cacheFactory) {
-        CacheManager cacheManager = new CacheManager(cacheFactory);
+    public AutoCacheManager autoCacheManager(CacheFactory cacheFactory) {
+        AutoCacheManager cacheManager = new AutoCacheManager(cacheFactory);
         return cacheManager;
     }
 
     @Bean
-    public AutoCacheInterceptor cacheInterceptor(CacheManager cacheManager) {
+    public AutoCacheInterceptor autoCacheInterceptor(AutoCacheManager cacheManager) {
         AutoCacheInterceptor interceptor = new AutoCacheInterceptor(cacheManager);
         return interceptor;
     }
