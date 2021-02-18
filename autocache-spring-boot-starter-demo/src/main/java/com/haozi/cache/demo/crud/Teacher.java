@@ -1,4 +1,4 @@
-package com.haozi.cache.demo.service;
+package com.haozi.cache.demo.crud;
 
 import com.haozi.cache.core.AutoCacheField;
 import lombok.AllArgsConstructor;

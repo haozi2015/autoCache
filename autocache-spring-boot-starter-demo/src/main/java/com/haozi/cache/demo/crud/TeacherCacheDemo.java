@@ -1,7 +1,5 @@
-package com.haozi.cache.demo;
+package com.haozi.cache.demo.crud;
 
-import com.haozi.cache.demo.service.Teacher;
-import com.haozi.cache.demo.service.TeacherService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.stereotype.Component;
