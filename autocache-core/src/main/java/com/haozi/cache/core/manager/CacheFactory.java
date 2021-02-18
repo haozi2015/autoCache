@@ -3,6 +3,7 @@ package com.haozi.cache.core.manager;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.haozi.cache.core.exception.AutoCacheException;
 import com.haozi.cache.core.interceptor.CacheInvoker;
 import com.haozi.cache.core.interceptor.CacheOperation;
 import org.springframework.data.redis.cache.RedisCacheConfiguration;
@@ -15,6 +16,7 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 import java.time.Duration;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
@@ -49,11 +51,16 @@ public class CacheFactory {
         // 二级缓存模式
         if (localCacheFlag && remoteCacheFlag) {
             LocalCache localCache = new LocalCache(cacheOperation.getLocalCacheExpire());
+            Optional.ofNullable(defaultRedisCacheWriter)
+                    .orElseThrow(AutoCacheException::nullRemoteCache);
             RemoteCache remoteCache = new RemoteCache(cacheOperation.getCacheName(), defaultRedisCacheWriter, redisCacheConfiguration(cacheOperation.getCacheName(), cacheOperation.getRemoteCacheExpire()));
             return new ProxyCache(localCache, remoteCache);
         }
         // 远端缓存
         if (remoteCacheFlag) {
+            Optional.ofNullable(defaultRedisCacheWriter)
+                    .orElseThrow(AutoCacheException::nullRemoteCache);
+
             return new RemoteCache(cacheOperation.getCacheName(), defaultRedisCacheWriter, redisCacheConfiguration(cacheOperation.getCacheName(), cacheOperation.getRemoteCacheExpire()));
         }
         // 内存缓存模式
