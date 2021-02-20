@@ -34,7 +34,7 @@ public @interface AutoCache {
     /**
      * 本地缓存最大条数
      *
-     * @return
+     * @return localMaxSize
      */
     long localMaxSize() default 1000;
 

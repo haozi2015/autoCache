@@ -11,8 +11,7 @@ import java.util.List;
 /**
  * 缓存使用（复杂）
  *
- * @author zhanghao
- * @date 2021/2/184:46 下午
+ * @author haozi
  */
 @Component
 public class ComplexAutoCacheDemo {
@@ -22,7 +21,8 @@ public class ComplexAutoCacheDemo {
      * <p>
      * 返回结果为集合时，可以缓存内部的元素
      *
-     * @return
+     * @param ids ids
+     * @return list
      */
     @AutoCache(remoteTTL = 30, elementCache = true)
     public List<ElementDemo> batchCache(List<Long> ids) {

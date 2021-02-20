@@ -7,17 +7,19 @@ import org.springframework.stereotype.Component;
 /**
  * 缓存使用（高级）
  *
- * @author zhanghao
- * @date 2021/2/184:31 下午
+ * @author haozi
  */
 @Component
 public class HighLevelAutoCacheDemo {
+
     /**
      * 自定义缓存key规则
      * <p>
      * 可用在共享缓存结果，非autoCache使用
      *
-     * @return
+     * @param id   id
+     * @param name name
+     * @return string
      */
     @AutoCache(remoteTTL = 30, key = "#id + ':' + #name")
     public String customKey(String id, String name) {
@@ -29,7 +31,7 @@ public class HighLevelAutoCacheDemo {
      * <p>
      * cacheName保持一致
      *
-     * @param id
+     * @param id id
      */
     @AutoCacheEvict(cacheName = "evict_demo")
     public void evictStr(String id) {
