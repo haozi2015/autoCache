@@ -22,7 +22,7 @@
 <dependency>
   <groupId>io.github.haozi2015</groupId>
   <artifactId>autocache-spring-boot-starter</artifactId>
-  <version>1.0.3</version>
+  <version>1.0.4</version>
 </dependency>
 ```
 
