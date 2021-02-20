@@ -50,7 +50,7 @@ public class CacheFactory {
         boolean remoteCacheFlag = cacheOperation.getRemoteCacheExpire() != null;
         // 二级缓存模式
         if (localCacheFlag && remoteCacheFlag) {
-            LocalCache localCache = new LocalCache(cacheOperation.getLocalCacheExpire());
+            LocalCache localCache = new LocalCache(cacheOperation.getLocalCacheExpire(), cacheOperation.getLocalCacheMaximumSize());
             Optional.ofNullable(defaultRedisCacheWriter)
                     .orElseThrow(AutoCacheException::nullRemoteCache);
             RemoteCache remoteCache = new RemoteCache(cacheOperation.getCacheName(), defaultRedisCacheWriter, redisCacheConfiguration(cacheOperation.getCacheName(), cacheOperation.getRemoteCacheExpire()));
@@ -64,7 +64,7 @@ public class CacheFactory {
             return new RemoteCache(cacheOperation.getCacheName(), defaultRedisCacheWriter, redisCacheConfiguration(cacheOperation.getCacheName(), cacheOperation.getRemoteCacheExpire()));
         }
         // 内存缓存模式
-        return new LocalCache(cacheOperation.getLocalCacheExpire());
+        return new LocalCache(cacheOperation.getLocalCacheExpire(), cacheOperation.getLocalCacheMaximumSize());
     }
 
     /**

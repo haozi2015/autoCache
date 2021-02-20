@@ -21,8 +21,9 @@ public class LocalCache extends AbstractCache {
 
     private Cache cache;
 
-    public LocalCache(long ttl) {
+    public LocalCache(long ttl, long maximumSize) {
         cache = Caffeine.newBuilder()
+                .maximumSize(maximumSize)
                 //最后一次写入后，expire单位时间后过期
                 .expireAfterWrite(ttl, TimeUnit.SECONDS)
                 .build();

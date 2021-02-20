@@ -1,7 +1,6 @@
 package com.haozi.cache.demo.crud;
 
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.InitializingBean;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
@@ -14,7 +13,7 @@ import java.util.Arrays;
  */
 @Slf4j
 @Component
-public class TeacherCacheDemo implements InitializingBean {
+public class TeacherCacheDemo {
     @Resource
     private TeacherService teacherService;
 
@@ -120,15 +119,4 @@ public class TeacherCacheDemo implements InitializingBean {
         teacherService.getTeacher(1L);
     }
 
-    @Override
-    public void afterPropertiesSet() throws Exception {
-        log.info(" demo ----get-----");
-        get();
-
-        log.info(" demo ----evict-----");
-        evict();
-
-        log.info(" demo ----evict2-----");
-        evict2();
-    }
 }

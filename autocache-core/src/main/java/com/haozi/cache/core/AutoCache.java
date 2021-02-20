@@ -32,6 +32,13 @@ public @interface AutoCache {
     long localTTL() default 0;
 
     /**
+     * 本地缓存最大条数
+     *
+     * @return
+     */
+    long localMaxSize() default 1000;
+
+    /**
      * 远程缓存过期时间
      * <p>
      * 单位：秒

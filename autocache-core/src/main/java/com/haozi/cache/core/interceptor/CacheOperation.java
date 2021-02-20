@@ -18,6 +18,7 @@ import java.lang.reflect.Method;
 @Builder
 public class CacheOperation {
     private String keySEL;
+    private Long localCacheMaximumSize;
     private Long localCacheExpire;
     private Long remoteCacheExpire;
     private boolean elementCache;
@@ -53,6 +54,7 @@ public class CacheOperation {
         }
         return CacheOperation.builder()
                 .localCacheExpire(autoCache.localTTL() <= 0L ? null : autoCache.localTTL())
+                .localCacheMaximumSize(autoCache.localMaxSize())
                 .remoteCacheExpire(autoCache.remoteTTL() <= 0L ? null : autoCache.remoteTTL())
                 .keySEL(autoCache.key())
                 .elementCache(autoCache.elementCache())
