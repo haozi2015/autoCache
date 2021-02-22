@@ -18,27 +18,27 @@
 ```
 
 #### 使用说明
-`autoCache` 仅需在方法使用`@AutoCache`注解，即完成方法的参数和结果缓存。
+仅需方法使用`@AutoCache`注解，即完成方法的参数和结果缓存。
 
 ```java
     // 仅用本地缓存，5秒后过期
     @AutoCache(localTTL = 5)
-    public String getLocalStr() {
-            return "abc";
-            }
+    String getLocalStr() {
+        return "abc";
+    }
 
     // 仅用远程缓存
     @AutoCache(remoteTTL = 30)
-    public String getRemoteStr() {
-            return "abc";
-            }
+    String getRemoteStr() {
+        return "abc";
+    }
             
     // 二级缓存
     // 先查本地缓存，不存在时查远程缓存，不存在时调用原方法，结果再依次被远程和本地缓存
     @AutoCache(localTTL = 5, remoteTTL = 30)
-    public String getStr() {
-            return "abc";
-            }
+    String getStr() {
+        return "abc";
+    }
 
 ```
 远程缓存，配置Redis同SpringBoot方式。
