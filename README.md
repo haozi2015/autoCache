@@ -48,7 +48,7 @@
 
 + [限制内存缓存最大条数](./autocache-spring-boot-starter-demo/src/main/java/com/haozi/cache/demo/SimpleAutoCacheDemo.java)
 + [自定义缓存KEY](./autocache-spring-boot-starter-demo/src/main/java/com/haozi/cache/demo/HighLevelAutoCacheDemo.java)
-+ [删除缓存](./autocache-spring-boot-starter-demo/src/main/java/com/haozi/cache/demo/HighLevelAutoCacheDemo.java)
++ [清除缓存](./autocache-spring-boot-starter-demo/src/main/java/com/haozi/cache/demo/HighLevelAutoCacheDemo.java)
 + [集合，按元素颗粒度缓存](./autocache-spring-boot-starter-demo/src/main/java/com/haozi/cache/demo/ComplexAutoCacheDemo.java)
 
 完整代码，参考[demo](./autocache-spring-boot-starter-demo/src/main/java/com/haozi/cache/demo)
