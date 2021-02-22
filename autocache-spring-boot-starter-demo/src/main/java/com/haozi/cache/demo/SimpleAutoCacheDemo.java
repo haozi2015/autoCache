@@ -21,6 +21,16 @@ public class SimpleAutoCacheDemo {
     }
 
     /**
+     * 限定内存缓存最大条数
+     *
+     * @return
+     */
+    @AutoCache(localTTL = 5, localMaxSize = 1000)
+    public String getLocalStr2() {
+        return "abc";
+    }
+
+    /**
      * 仅用远程缓存
      *
      * @return string
