@@ -54,10 +54,9 @@
 完整代码，参考[demo](./autocache-spring-boot-starter-demo/src/main/java/com/haozi/cache/demo)
 
 #### TODO 
-1. 主动加载缓存功能
+1. 主动缓存功能
 2. 监控，访问量、命中率、miss率等
-3. 内存缓存，单节点清理后，其它节点的一致性问题
-4. 发现功能，发现系统哪些方法访问量高，耗时较长
+3. 内存缓存的一致性问题
 
 
  
